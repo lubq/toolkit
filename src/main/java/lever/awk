@@ -1,0 +1,1 @@
+[16:56:43 lubq@baymax-dev fix]$ grep -n '55=.*150=F' PXM.2019-08-15_SHORT.log  |awk -v head="55=" -v tail="60=" '{print substr($0, index($0,head)+length(head),index($0,tail)-index($0,head)-length(head))}'
